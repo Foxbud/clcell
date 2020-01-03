@@ -38,7 +38,7 @@ class RuleSet:
 		self.populated = tuple(populated)
 		self._raw = np.concatenate(
 			(
-				np.array(self.unpopulated, dtype=np.int32),
-				np.array(self.populated, dtype=np.int32),
+				np.array(self.unpopulated, dtype=np.int8),
+				np.array(self.populated, dtype=np.int8),
 			)
 		)

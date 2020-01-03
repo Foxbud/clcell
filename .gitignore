@@ -3,4 +3,5 @@ build/
 *.egg-info/
 __pycache__/
 .eggs/
+bench.py
 device_api.py
