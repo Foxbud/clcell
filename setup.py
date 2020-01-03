@@ -16,7 +16,7 @@ setup_info = dict(
 		'pyopencl>=2015.2',
 		'numpy',
 	],
-	description='OpenCL-accelerated cellular automata simulator.',
+	description='OpenCL-accelerated cellular automata simulator',
 	long_description_content_type='text/markdown',
 	url='https://github.com/Foxbud/clcell',
 	author='Garrett Fairburn',
