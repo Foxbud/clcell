@@ -84,5 +84,10 @@ final_states = sim.batch_simulate(1000, seed_states)
 
 ## Changelog
 
+**v1.0.1**
+- Simplified how the device code checks for boundary cells.
+- Refactored device code to use grids of 8-bit cells as opposed to 32-bit.
+- Fixed incorrectly placed size annotations in one device function.
+
 **v1.0.0**
 - Initial release.
