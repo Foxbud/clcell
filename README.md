@@ -60,7 +60,7 @@ import clcell
 sim = clcell.CASimulator(clcell.LIFE)
 
 # Create a randomized game state to use as a seed.
-seed_state = np.random.randint(0, 2, (1023, 1023), dtype=np.int32)
+seed_state = np.random.randint(0, 2, (1023, 1023), dtype=np.int8)
 # Pad state with zeros (required for now).
 seed_state = np.pad(seed_state, 1, constant_values=0)
 
@@ -70,7 +70,7 @@ final_state = sim.simulate(10000, seed_state)
 # Create a batch of 1,000 randomized, padded game states to use as seeds.
 seed_states = np.array([
   np.pad(
-    np.random.randint(0, 2, (127, 127), dtype=np.int32),
+    np.random.randint(0, 2, (127, 127), dtype=np.int8),
     1,
     constant_values=0
   )
@@ -84,5 +84,5 @@ final_states = sim.batch_simulate(1000, seed_states)
 
 ## Changelog
 
-**1.0.0**
+**v1.0.0**
 - Initial release.
