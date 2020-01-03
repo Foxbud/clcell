@@ -31,7 +31,7 @@ entry simulate [n] [m]
 entry batch_simulate [l] [n] [m]
 	(ruleset: [18]i8)
 	(num_steps: i32)
-	(seed_states: [l][n][m]i8): [l][m][n]i8 =
+	(seed_states: [l][n][m]i8): [l][n][m]i8 =
 	let steps: [l]i32 = replicate l num_steps
 	let rulesets: [l][18]i8 = map (\_ -> ruleset) steps
 	in map3 simulate rulesets steps seed_states
