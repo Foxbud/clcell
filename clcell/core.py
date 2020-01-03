@@ -21,14 +21,14 @@ class CASimulator:
 		return self._api.simulate(
 			self._ruleset._raw,
 			num_steps,
-			seed_state
+			np.array(seed_state, dtype=np.int8)
 		)
 
 	def batch_simulate(self, num_steps, seed_states):
 		return self._api.batch_simulate(
 			self._ruleset._raw,
 			num_steps,
-			seed_states
+			np.array(seed_states, dtype=np.int8)
 		)
 
 
